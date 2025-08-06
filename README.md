@@ -4,7 +4,7 @@ A modern, responsive analytics dashboard built with React, TypeScript, and shadc
 
 ## 🌐 Live Demo
 
-**[View Live Demo](https://your-dashboard-url.netlify.app)** - Experience the dashboard in action!
+**[View Live Demo](https://admybrand-aidashboard.netlify.app/)** - Experience the dashboard in action!
 
 
 ## ✨ Features
@@ -189,4 +189,5 @@ See [AI_USAGE_REPORT.md](./AI_USAGE_REPORT.md) for detailed information about th
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
