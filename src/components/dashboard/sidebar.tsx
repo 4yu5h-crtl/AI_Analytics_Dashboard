@@ -113,15 +113,31 @@ export function DashboardSidebar() {
       </nav>
 
       {/* User Profile */}
-      {!collapsed && (
+      {!collapsed ? (
         <div className="p-4 border-t border-sidebar-border">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
-              <span className="text-sm font-medium text-white">BL</span>
+            <div className="w-8 h-8 rounded-full overflow-hidden">
+              <img
+                src="/user.jpeg"
+                alt="User Profile"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-sidebar-foreground truncate">Brandon Lee</p>
               <p className="text-xs text-sidebar-foreground/60">Admin</p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="p-2 border-t border-sidebar-border">
+          <div className="flex justify-center">
+            <div className="w-8 h-8 rounded-full overflow-hidden">
+              <img
+                src="/user.jpeg"
+                alt="User Profile"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
