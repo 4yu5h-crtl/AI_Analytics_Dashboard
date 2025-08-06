@@ -27,11 +27,6 @@ A modern, responsive analytics dashboard built with React, TypeScript, and shadc
 - **Search & Filters**: Advanced filtering and search capabilities
 - **Export Functionality**: CSV and PDF export options
 
-### ⚡ **Performance & Accessibility**
-- **WCAG 2.1 AA Compliant**: Full accessibility support
-- **Reduced Motion Support**: Respects user preferences
-- **Optimized Performance**: 60fps animations and efficient rendering
-- **Keyboard Navigation**: Complete keyboard accessibility
 
 ## 🛠️ Tech Stack
 
@@ -194,3 +189,4 @@ See [AI_USAGE_REPORT.md](./AI_USAGE_REPORT.md) for detailed information about th
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
