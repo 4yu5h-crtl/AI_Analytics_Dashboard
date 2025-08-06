@@ -6,7 +6,6 @@ A modern, responsive analytics dashboard built with React, TypeScript, and shadc
 
 **[View Live Demo](https://your-dashboard-url.netlify.app)** - Experience the dashboard in action!
 
-*Note: Replace the URL above with your actual deployed Netlify URL*
 
 ## ✨ Features
 
@@ -191,32 +190,7 @@ This project was built using AI-assisted development tools:
 
 See [AI_USAGE_REPORT.md](./AI_USAGE_REPORT.md) for detailed information about the AI development process.
 
-## 📊 Performance Metrics
-
-- **Lighthouse Score**: 95+ across all metrics
-- **Bundle Size**: Optimized with tree shaking
-- **Animation Performance**: 60fps smooth animations
-- **Accessibility**: WCAG 2.1 AA compliant
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **shadcn/ui** for the excellent component library
-- **Recharts** for powerful charting capabilities
-- **Framer Motion** for smooth animations
-- **Tailwind CSS** for utility-first styling
-
----
-
-**Built with ❤️ using AI-assisted development**
