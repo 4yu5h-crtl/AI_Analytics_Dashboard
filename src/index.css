@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ADmyBRAND Insights Design System - Dark Analytics Theme */
+
+@layer base {
+  /* Hide scrollbars while maintaining scroll functionality */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none; /* WebKit browsers (Chrome, Safari, Edge) */
+  }
+  
+  :root {
+    /* Light mode colors */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 310 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 310 100% 60%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 150 100% 30%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 310 100% 50%;
+    --glass: 240 10% 98% / 0.8;
+    --glass-border: 240 10% 85% / 0.3;
+    --chart-1: 310 100% 50%;
+    --chart-2: 280 100% 55%;
+    --chart-3: 250 100% 55%;
+    --chart-4: 200 100% 50%;
+    --chart-5: 160 100% 45%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(320, 100%, 60%));
+    --gradient-background: linear-gradient(135deg, hsl(240, 100%, 99%), hsl(260, 100%, 98%), hsl(280, 100%, 97%));
+    --gradient-card: linear-gradient(135deg, hsl(240, 10%, 98% / 0.6), hsl(260, 15%, 96% / 0.4));
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 8px 32px hsl(240, 10%, 90% / 0.4);
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 310 100% 70%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 310 100% 85%;
+    --secondary: 280 60% 35%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 8% 20%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 320 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 150 100% 50%;
+    --border: 240 10% 25%;
+    --input: 240 10% 15%;
+    --ring: 310 100% 70%;
+    --glass: 240 10% 15% / 0.8;
+    --glass-border: 240 10% 25% / 0.3;
+    --chart-1: 310 100% 70%;
+    --chart-2: 280 100% 75%;
+    --chart-3: 250 100% 75%;
+    --chart-4: 200 100% 70%;
+    --chart-5: 160 100% 65%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-background: linear-gradient(135deg, hsl(240, 12%, 8%), hsl(260, 15%, 12%), hsl(280, 10%, 10%));
+    --gradient-card: linear-gradient(135deg, hsl(240, 10%, 12% / 0.6), hsl(260, 15%, 15% / 0.4));
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 8px 32px hsl(240, 10%, 5% / 0.4);
+    --sidebar-background: 240 12% 10%;
+    --sidebar-foreground: 240 5% 85%;
+    --sidebar-primary: 310 100% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 15%;
+    --sidebar-accent-foreground: 240 5% 90%;
+    --sidebar-border: 240 10% 20%;
+    --sidebar-ring: 310 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground font-inter;
+    background: var(--gradient-background);
+    min-height: 100vh;
+  }
+
+  /* Glass morphism utilities */
+  .glass-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-nav {
+    background: hsl(var(--sidebar-background) / 0.95);
+    backdrop-filter: blur(16px);
+    border-right: 1px solid hsl(var(--sidebar-border));
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer components {
+  /* Chart container styling */
+  .chart-container {
+    @apply glass-card p-6 rounded-xl;
+  }
+
+  /* Metric card styling */
+  .metric-card {
+    @apply glass-card p-6 rounded-xl transition-smooth hover:scale-[1.02];
+  }
+
+  /* Progress bar styling */
+  .progress-bar {
+    background: hsl(var(--muted-foreground) / 0.12); /* more visible background */
+    border: 1px solid hsl(var(--muted-foreground) / 0.18);
+    height: 0.75rem; /* slightly taller */
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 9999px;
+    box-shadow: 0 1px 4px hsl(var(--primary) / 0.15);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Override for bg-muted if needed for better contrast */
+.bg-muted {
+  background: hsl(var(--muted-foreground) / 0.08) !important;
+}
+
+/* Glass morphism effects */
+.glass-card {
+  @apply bg-card/50 backdrop-blur-sm border border-border/50;
+}
+
+.glass-nav {
+  @apply bg-card/30 backdrop-blur-md border-r border-border/50;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)/0.8) 100%);
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 20px hsl(var(--primary)/0.3);
+}
+
+/* Sidebar specific colors */
+.text-sidebar-foreground {
+  @apply text-foreground/80;
+}
+
+.text-sidebar-primary-foreground {
+  @apply text-primary-foreground;
+}
+
+.bg-sidebar-primary {
+  @apply bg-primary;
+}
+
+.bg-sidebar-accent {
+  @apply bg-accent/50;
+}
+
+.text-sidebar-accent-foreground {
+  @apply text-accent-foreground;
+}
+
+.border-sidebar-border {
+  @apply border-border/50;
+}
+
+/* Sidebar button glow effects */
+.sidebar-button-glow {
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-button-glow:hover {
+  box-shadow: 0 0 15px rgba(var(--primary), 0.2);
+  background-color: hsl(var(--accent) / 0.3);
+}
+
+/* Shimmer animation for skeleton loading */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 25%,
+    hsl(var(--muted)/0.5) 50%,
+    hsl(var(--muted)) 75%
+  );
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Enhanced skeleton animation */
+.skeleton-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
